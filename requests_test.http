@@ -1,0 +1,77 @@
+# <---- ADVERTISEMENTS ---->
+###
+# Получить все объявления
+GET {{host}}/advertisements/
+
+###
+#Получить объявление по id = 1
+GET {{host}}/advertisements/1/
+
+###
+#Создать объявление
+POST {{host}}/advertisements/
+Content-Type: application/json
+Authorization: Token YOUR_TOKEN
+
+{
+  "title": "Объявление #1",
+  "description": "Описание объявления #1"
+}
+
+###
+#Полностью обновить объявление
+PUT {{host}}/advertisements/1/
+Content-Type: application/json
+Authorization: Token YOUR_TOKEN
+
+{
+  "title": "Новый заголовок",
+  "description": "Новое описание"
+}
+
+###
+#Частично обновить объявление
+PATCH {{host}}/advertisements/1/
+Content-Type: application/json
+Authorization: Token YOUR_TOKEN
+
+{
+  "description": "Ну прям вообще новое описание"
+}
+
+###
+#Удалить объявление
+DELETE {{host}}/advertisements/1/
+Content-Type: application/json
+Authorization: Token YOUR_TOKEN
+
+###
+# <---- USERS ---->
+#Регистрация
+POST {{host}}/users/register/
+Content-Type: application/json
+
+{
+  "email": "example@gmail.com",
+  "password": "12345678"
+}
+
+###
+#Login
+POST {{host}}/users/login/
+Content-Type: application/json
+
+{
+  "email": "example@gmail.com",
+  "password": "12345678"
+}
+
+###
+#Logout
+POST {{host}}/users/logout
+Content-Type: application/json
+Authorization: Token YOUR_TOKEN
+
+
+
+
